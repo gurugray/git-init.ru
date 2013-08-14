@@ -1,0 +1,13 @@
+name: "Рецепты и полезные советы по использованию Git SCM"
+markdown: redcarpet
+markdown_ext: md
+pygments: true
+timezone: Europe/Simferopol
+
+include: ['_pages']
+relative_permalinks: false
+permalink: /:year/:categories/:title.html
+
+url: "http://git-init.ru"
+author: "Сергей Сергеев"
+
