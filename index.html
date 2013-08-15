@@ -7,9 +7,9 @@ title: "Рецепты и полезные советы по использов�
   <ul class="posts">
     {% for post in site.posts %}
     <li class="index">
-        <div class="index-header"><span class="index-date">{{ post.date | date_to_string }}</span> &raquo; <h3><a href="{{ post.url }}">{{ post.title }}</a></h3></div>
+    <div class="index-header"><span class="index-date">{{ post.date | date_to_string }}</span> &raquo; <h3><a href="{{site.url}}{{ post.url }}">{{ post.title }}</a></h3></div>
         {{ post.excerpt }}
-        <p><a class="read-more" href="{{ post.url }}">Читать дальше</a></p>
+        <p><a class="read-more" href="{{site.url}}{{ post.url }}">Читать дальше</a></p>
     </li>
     {% endfor %}
   </ul>

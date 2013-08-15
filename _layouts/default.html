@@ -6,9 +6,9 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="/css/stylesheet.css" media="screen" />
-    <link rel="stylesheet" href="/css/pygment_trac.css" media="screen" />
-    <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="http://feeds.feedburner.com/GitTips" />
+        <link rel="stylesheet" href="{{site.url}}/css/stylesheet.css" media="screen" />
+        <link rel="stylesheet" href="{{site.url}}/css/pygment_trac.css" media="screen" />
+        <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="http://feeds.feedburner.com/GitTips" />
 
 
     </head>
@@ -16,7 +16,7 @@
 
     <header>
       <div class="container">
-          <h1><a href="/">git init .</a></h1>
+          <h1><a href="{{site.url}}">git init .</a></h1>
         <h2>{{ site.name }}</h2>
       </div>
     </header>
