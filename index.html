@@ -1,16 +1,12 @@
 ---
-layout: default
+layout: empty
 title: "Рецепты и полезные советы по использованию Git SCM"
 ---
 
-<div id="home">
-  <ul class="posts">
-    {% for post in site.posts %}
-    <li class="index">
-    <div class="index-header"><span class="index-date">{{ post.date | date_to_string }}</span> &raquo; <h3><a href="{{site.url}}{{ post.url }}">{{ post.title }}</a></h3></div>
-        {{ post.excerpt }}
-        <p><a class="read-more" href="{{site.url}}{{ post.url }}">Читать дальше</a></p>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+<div class="bage">git rebase</div>
+<div class="note">
+Идёт процесс переосмысления сайта на 2014 год.
+{% for post in site.posts %}
+<a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
+{% endfor %}
+ </div>

@@ -304,3 +304,61 @@ ol
 {
     padding: 0;
 }
+
+
+/* переосмысление */
+
+.bage
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 10em;
+
+  -webkit-transform: translateX(-50%) translateY(-50%);
+     -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+       -o-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.note
+{
+  position: absolute;
+  bottom: 1em;
+  margin-left: 1em;
+
+  font: 11px/1 serif;
+}
+
+.bage::before
+{
+  position: absolute;
+  content: '>';
+
+  margin-left: -1em;
+
+  color: #999;
+}
+
+.note a
+{
+  padding-right: .5em;
+}
+
+.note a::after
+{
+  position: absolute;
+  content: ','
+}
+
+.note a:last-of-type::after
+{
+  content: ''
+}
+
+.post-title
+{
+  margin-top: 1em;
+}
