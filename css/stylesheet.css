@@ -5,7 +5,13 @@ body {
   color: #333;
   font: 16px;
   line-height: 1.5;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-family: "PT Sans", Helvetica, Arial, sans;
+  font-size: 17px;
+}
+
+code {
+  font-family: monospace;
+  font-size: 14px;
 }
 
 /* General & 'Reset' Stuff */
@@ -142,7 +148,6 @@ blockquote {
 }
 
 pre {
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   background: rgba(224, 224, 224, 0.5);
   padding: 10px 20px 10px 10px;
   margi-left: -10px;
@@ -310,6 +315,8 @@ ol
 
 .bage
 {
+  font-family: monospace;
+
   position: absolute;
   top: 50%;
   left: 50%;
