@@ -36,25 +36,25 @@ layout: translate
 
 Хорошая новость в том, что эта модель данных легка для понимания и выяснив это вы улучшите свои навыки в использовании Git'а.
 
-## Objects
+## Объекты
 
-Just about everything in a Git repository is either an **object**  or a **ref**.
+Практически всё в репозитории Git'а либо **объект** либо **ссылки** _(анг. reference, ref)_.
 
-Objects are how Git stores content.
-They're stored in `.git/objects`, which is sometimes called the *object database* or *ODB*.
-Objects in the ODB are immutable; once you create one, you can't change it.
-This is because Git uses an object's SHA-1 hash to identify and find it, and if you were to change the content of an object, its hash would change.
+Объекты, это то в чём Git хранит содержимое.
+Они хранятся в `.git/objects`, директории, которая иногда называется *объектной базой данных*.
+Объекты в ней неизменны, однажды создав их, вы не можете их поменять.
+Это потому что Git использует SHA-1 хэш от их содержимого для их идентификации и поиска, и если вы поменяете содержимое объекта — его хэш изменится.
 
-Objects come in four flavors: blobs, trees, commits, and tag annotations.
-**Blobs** are chunks of data that Git doesn't interpret with any kind of structure, and it's how Git stores your files.
-Objects are actually pretty easy to inspect:
+Объекты представлены в четырёх видах: blob'ы _(англ. blobs)_, деревья, коммиты и аннотированные теги.
+**Blobs'ы** это куски данных, которые Git никаким образом не интерпретирует, это то как Git хранит ваши файлы.
+Объекты легко проинспектировать:
 
 ```
-# Print the object's type
+# вывести тип объекта
 $ git cat-file -t d7abd6
 blob
 
-# Print the first 5 lines of the object's content
+# Вывести первые 5 строк содержимого объекта
 $ git cat-file -p d7abd6 | head -n 5
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
@@ -63,13 +63,13 @@ $ git cat-file -p d7abd6 | head -n 5
 <head>
 ```
 
-Note that there's no filename here.
-Git expects file renames to be fairly common, and if the filename were embedded with the content, you'd have to keep lots of copies of that object where the only difference is the filename.
+Обратите внимания, что тут нет имени файла.
+Git ожидает, что операция переименование файлов достаточно частая и, если бы имена файлов были объедены с содержимым, вам бы пришлось хранить много копий объектов, разница между которыми была бы лишь в имени файла.
 
-You use `git cat-file` because Git has optimized the storage of objects.
-They're gzip-compressed, and sometimes strings lots of them together into big pack-files, so if you look in `.git/objects`, you may not see anything you recognize as an object.
+Вы использовали `git cat-file` потому что Git оптимизирует хранение объектов.
+Они сжимаются gzip'ом, и иногда объединяются в большие упакованные файлы _(англ. pack-files)_ и если вы посмотрите в `.git/objects`, вы можете не увидеть ничего, что смогли бы назвать объектом.
 
-The second type of object is called a **tree**, and it's how Git stores directory structures.
+Второй тип объектов называется **дерево** _(англ. tree)_ и это то как Git хранит структуру директорий проекта.
 
 ```
 $ git cat-file -t 8f5b65
@@ -83,12 +83,12 @@ $ git cat-file -p 8f5b65 | head -n 5
 040000 tree 52deb7c58d46aa09208c0b863fbecee81a2e3dad    custom
 ```
 
-Only blobs are unstructured; Git expects a fairly specific format for all the others.
-Each line of a tree object contains the file's permission flags, what type it is (`blob`s are files, `tree`s are subdirectories), the SHA-1 hash of the object, and a filename.
-So the tree type is responsible for the names and locations of things, and the blob type is responsible for their contents.
+Только лишь blob'ы не структурированы, Git ожидает довольно строгого формата от всех остальных объектов.
+Каждая строка объекта «дерево» содержит флаги доступа к файлу, какой это тип (`blob` это файл, `tree` это поддиректории), SHA-1 хэш от объекта и имя файла.
+То есть объект «дерево» отвечает за имена и расположение разных вещей, а blob'ы отвечают за их содержимое.
 
-The third type of object is a **commit**.
-This is how Git represents a snapshot in history.
+Третий тип объектов это **коммит** _(англ. commit)_.
+Это то, как Git описывает снимок в истории.
 
 ```
  $ git cat-file -t e365b1
@@ -103,11 +103,11 @@ committer Ben Straub <bs@github.com> 1380719530 -0700
 Fix typo, remove false statement
 ```
 
-A commit has exactly one tree reference, which is the root directory of the commit.
-It has zero or more parents, which are references to other commits, and it has some metadata about the commit – who made it, when it was made, and what it's about.
+У коммита есть только одна ссылка на объект дерева, которое является описанием корневой директории коммита.
+Он имеет несколько, или не имеет вовсе, родителей, записи о которых лишь ссылки на другие коммиты и он содержит некоторую мета-информацию о самом коммите — кто его создал, когда и о чём он.
 
-There's just one more type of object, and it's not used very often.
-It's called a **tag annotation**, and it's used to make a tag with comments.
+Есть ещё один тип объектов, и он используется не часто.
+Называется он **аннотированный тег** _(англ. tag annotation)_ и используется для создания тега с комментарием.
 
 ```
 $ git cat-file -t 849a5e34a
@@ -122,11 +122,11 @@ tagger Ben Straub <bs@github.com> Fri May 11 11:47:58 2012 -0700
 Tag on tag
 ```
 
-I'll say more about how these work later; for now, just note the object SHA that's stored in there.
+Я расскажу как это работает позже, сейчас же отметьте SHA сумму, которая тут хранится.
 
-That's it!
-You can count the number of object types on one hand!
-See how simple this is?
+Это всё!
+Вы можете пересчитать типы объектов на пальцах одной руки!
+Видите насколько это просто?
 
 ## Refs
 
