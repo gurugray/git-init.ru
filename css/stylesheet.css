@@ -145,6 +145,7 @@ blockquote {
   color: #aaa;
   padding-left: 10px;
   border-left: 1px dotted #666;
+  margin: 0 0 0 -11px
 }
 
 pre {
