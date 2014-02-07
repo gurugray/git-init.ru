@@ -135,7 +135,7 @@ ul li {
 
 ul li:before {
     position: absolute;
-    content: "»";
+    content: "—";
     color: #b5e853;
     margin-left: -1em;
     margin-top: -px;
@@ -299,7 +299,7 @@ ul .index::before
     margin-bottom: 3em;
 }
 
-ol
+ol, ul
 {
     margin: 0;
     padding: 0;
