@@ -17,25 +17,24 @@ layout: translate
 ---
 > Иногда нам действительно нужно знать как это работает.
 
-The way we use most computer systems is through a metaphor.
+В основном мы используем компьютеры с помощью метафор.
 
-When you're using a word processor, you don't think about the byte-by-byte representation of each character, or the control sequences that determine which words are italic and which are bold-face.
-The software abstracts that away, presenting a clean metaphor – inked characters on a sheet of paper.
-You write your words, decide on their font and style, and when you're ready for your words to be on *actual* paper, you print.
+Когда вы используете текстовый редактор, вы не думаете о байтовом представлении каждого символа, или об управляющих последовательностях, которые определяют какие слова имеют курсивное или полужирное начертание.
+Программа избавляет вас от этого, предоставляя понятную метафору — нарисованный символ на листе бумаги.
+Вы пишете слова, определяетесь со шрифтом и стилем для них, и когда вы готовы к тому, чтобы ваши слова попали на *реальную* бумагу — отправляете их на принтер.
 
-When you're adjusting the exposure of a photo, you don't want think about the mathematical acrobatics necessary to change the R, G, and B bytes of every pixel *just so*, or the resampling algorithm needed to adjust the size or rotation.
-The metaphor is something like a darkroom, and you adjust exposure and brightness, paint away red-eye, and erase the red wine stain on the wedding dress.
+Когда вы регулируете экспозицию фотографии, вы не думаете о математических выкрутасах необходимых для смены R, G, B каналов для каждого пикселя, или алгоритмов пересчёта при смене размера или поворота.
+Тут метафора для вас это комната проявки, вы просто регулируете экспозицию и яркость, убираете «красные глаза» и стираете пятно от вина на подвенечном платье.
 
-And with most version control systems, you don't want to know how the data is stored and retrieved, or how the bytes are ordered during a network transmission.
-You just want to write your code, and every once in a while save a snapshot to someplace safe, so the metaphor is defined on that level.
-The underlying data model is complicated, and you rarely (if ever) need to know what it is, because the UI is pretty effective at abstracting those details away.
+Со многими системами контроля версий вы тоже не хотите знать как данные хранятся и извлекаются, или как сортируются байты при передаче по сети.
+Вы просто хотите писать свой код, каждый раз сохраняя «снимок» _(англ. snapshot)_ в безопасное место, и метафора обозначена на таком уровне.
+Нижележащая структура данных сложна и вам редко (если вообще кода-нибудь) понадобиться знать насколько, потому что пользовательский интерфейс довольно эффективно скрывает эти детали на своём уровне абстракции.
 
-With Git, the story is a little different.
-The metaphor it presents is a directed acyclic graph (DAG) of commit nodes, which is to say there *is* no metaphor – the data model actually is a DAG.
-If you try to re-use the metaphor you learned from another system, you're going to run into trouble.
+С Git'ом немного другая история.
+Метафора представляет из себя направленный ацикличный граф _(англ. directed acyclic graph, DAG)_ с коммитами в качестве его узлов, что говорит нам о том, что нет никакой метафоры — модель данных на самом деле граф.
+Если вы попробуете использовать метафоры других систем, то вам не избежать неприятностей.
 
-The good news is that this data model is easy to understand, and that figuring it out will make you better at using Git.
-
+Хорошая новость в том, что эта модель данных легка для понимания и выяснив это вы улучшите свои навыки в использовании Git'а.
 
 ## Objects
 
