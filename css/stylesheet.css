@@ -385,3 +385,50 @@ ol, ul
 {
   margin-top: 1em;
 }
+
+#main_content .origin
+{
+  display: block;
+
+  margin: 1em 0;
+}
+
+.translate::before
+{
+  font-size: 15px;
+  content: 'перевод';
+
+  position: absolute;
+
+  margin: -8px 0 0 -70px;
+
+  color: #f55;
+}
+
+.users
+{
+  font-size: 12px;
+
+  display: table;
+
+  width: 100%;
+  padding-top: 10px;
+
+  border-top: 2px solid #eee;
+}
+
+.userpic
+{
+  width: 80px;
+  height: 80px;
+
+  float: left;
+
+  margin: 3px 15px 5px 0;
+}
+.user
+{
+  display: table-cell;
+
+  width: 49%;
+}

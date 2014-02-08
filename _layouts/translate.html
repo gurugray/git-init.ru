@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<h2 class="post-title translate">{{ page.title }}</h2>
+
+<div class="post">
+{{ content }}
+
+<h3 class="origin">Оригинальная статья: <a href="{{page.origin}}">{{page.originTitle}}</a></h3>
+
+<div class="users">
+	<div class="user author">
+		<img class="userpic" src="{{page.authorAvatar}}">
+		Автор: <a href="{{page.authorLink}}">{{page.author}}</a><br>
+		GitHub: <a href="https://github.com/{{page.authorGithub}}">{{page.authorGithub}}</a><br>
+		Twitter: <a href="https://twitter.com/{{page.authorTwitter}}">@{{page.authorTwitter}}</a>
+	</div><div class="user author">
+		<img class="userpic" src="https://gravatar.com/avatar/2ffacc76f61622698389096864acf01b?r=x&amp;s=160">
+		Переводчик: <a href="http://git-init.ru">Сергей Сергеев</a><br>
+		GitHub: <a href="https://github.com/gurugray">gurugray</a><br>
+		Twitter: <a href="https://twitter.com/gurugray">@gurugray</a>
+	</div>
+
+</div>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script>
+  var disqus_shortname = 'git-init';
+  (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Включите JavaScript для просмотра <a href="http://disqus.com/?ref_noscript">комментариев Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">комментарии <span class="logo-disqus">Disqus</span></a>
+
