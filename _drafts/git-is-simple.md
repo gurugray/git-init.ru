@@ -166,29 +166,27 @@ tag (ref)  →  tag_ann (odb)  →  commit
 branch  →  tag  →  tag_ann_a  →  tag_ann_b  →  blob
 ```
 
-## Three Trees
+## Три дерева
 
-Tree-type objects in the ODB aren't the only tree that Git likes to think about.
-During your day-to-day work, you'll deal with three of them: HEAD, the index, and the work tree.
+Объекты типа «дерево» в объектной базе это не все деревья с которыми работает Git.
+Во время вашей ежедневной работы, вы имеете дело с тремя такими деревьями: HEAD, индекс и рабочая копия.
 
-**HEAD** is the last commit that was made, and it's the parent of your next commit.
-Technically, it's a symbolic ref that points to the branch you're on, which points to the last commit, but for the purposes of this section we'll simplify a bit.
+**HEAD** это последний коммит, который был сделан и он же родитель для следующего.
+Технически это символьная ссылка, которая указывает на текущую ветку, которая в свою очередь указывает на последний коммит, но для целей текущей секции мы несколько упростим это понятие.
 
-The **index** is a proposal for the next commit.
-When you do a checkout, Git copies the HEAD tree to the index, and when you type `git commit -m 'foo'`, it's going to take what's in the index and store it in the ODB as the new commit's tree.
+**Индекс** это то, что предполагается для следующего коммита.
+Когда вы делает чекаут _(англ. checkout)_, Git копирует дерево HEAD в индекс, а когда вы набираете `git commit -m 'foo'`, всё то что было в индексе попадает в объектную базу как дерево нового коммита.
 
-The **work tree** is a sandbox.
-You can safely create, update, and delete files at will in this area, knowing that Git has backups of everything.
-This is how Git makes your content available to the rest of the universe of tools.
+**Рабочая копия** это песочница.
+Вы спокойно можете создавать, обновлять и удалять тут файлы, зная что Git сохраняет архивные копии всего.
+Именно тут Git делает доступными ваши изменения остальным инструментам.
 
-There are a few commands whose job is mainly to deal with these three trees.
+Есть несколько команд, которые в основном работают с этими деревьями.
 
-* `git checkout` – Copies content from HEAD into the index and work tree.
-  It can also move HEAD first.
-* `git add` – Copies content from the work tree to the index.
-* `git commit` – Copies content from the index to HEAD.
-
-
+* `git checkout` – Копирует содержимое HEAD в индекс и в рабочую копию.
+  Она также сначала двигает HEAD.
+* `git add` – Копирует содержимое рабочей копии в индекс.
+* `git commit` – Копирует содержимое индекса в HEAD.
 
 ## Reset is Easier Now
 
