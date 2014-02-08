@@ -128,44 +128,43 @@ Tag on tag
 Вы можете пересчитать типы объектов на пальцах одной руки!
 Видите насколько это просто?
 
-## Refs
+## Ссылки
 
-References (or *refs*) are nothing more than pointers to objects or other refs.
-They consist of two pieces of information: the name of the ref, and where it points.
-If a ref points to an object, it's called a *direct ref*; if it points to another ref, it's called a *symbolic ref*.
+Ссылки  (или *ref'ы*) не более чем указатели на объекты или другие ссылки.
+Информация в них состоит из двух частей: имени ссылки и куда она указывает.
+Если ссылка указывает на объект, она называется *прямой ссылкой*, если она указывает на другую ссылку, то *символической ссылкой*.
 
-Most refs are direct.
-To confirm this, check the contents of anything under `.git/refs/heads`; they're all plain-text files whose content is the SHA hash of the commit they point to.
+В основном ссылки прямые.
+Что бы это подтвердить проверим содержимое чего либо в директории `.git/refs/heads`, всё что там лежит — текстовые файлы, их содержимое это SHA хэши коммитов на которые они указывают.
 
 ```
 $ cat .git/refs/heads/master
 2b67270f960563c55dd6c66495517bccc4f7fb17
 ```
 
-Git also keeps around a few symbolic refs for specific purposes.
-The most commonly useful one is `HEAD`, which usually points to the branch you have checked out:
+Git хранит и несколько символических ссылок для специальных целей.
+Самая используемая это `HEAD`, указывающая на ветку с которой вы сейчас работаете:
 
 ```
 $ cat HEAD
 ref: refs/heads/master
 ```
 
-Now that we know how refs work, let's take another stab at that tag annotation object we saw earlier.
-Remember that refs are basically just names for locations; there's no commentary associated with them, and you can change them at any time.
-Tag annotations solve both of these issues by putting ref-like information into the ODB (making it immutable, and allowing it to have more content), then making it findable by attaching a regular tag ref to it.
-The whole scheme looks like this:
+Теперь мы знаем как работают ссылки, давайте ещё раз взглянем на объект аннотированного тега, который мы видели ранее.
+Помните, что ссылки это просто имена для обозначения расположения, для них нет комментариев и вы можете изменять их в любое время.
+Аннотированные теги разрешают эти задачи складывая информацию о ссылке в объектную базу (делая их неизменяемыми и расширяя их дополнительным содержанием) затем делают их доступными, присоединяя обычный тег к ним.
+Вся схема выглядит примерно так:
 
 ```
-tag (ref)  -->  tag_ann (odb)  -->  commit
+tag (ref)  →  tag_ann (odb)  →  commit
 ```
 
-Note that this opens up a whole new universe of possibility: refs don't have to point to *commits*.
-They can point to *any* kind of object, which means you could technically set up something like this (though it's not clear why you'd want to):
+Омечу, что это открывает нам целую вселенную новых возможностей: ссылки не обязаны ссылаться на *коммиты*.
+Они могут указывать на *любой* тип объектов, что означает вы технически может создать что-то вроде этого (правда не ясно зачем вам может такое понадобиться):
 
 ```
-branch --> tag --> tag_ann_a --> tag_ann_b --> blob
+branch  →  tag  →  tag_ann_a  →  tag_ann_b  →  blob
 ```
-
 
 ## Three Trees
 
