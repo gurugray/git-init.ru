@@ -188,29 +188,28 @@ branch  →  tag  →  tag_ann_a  →  tag_ann_b  →  blob
 * `git add` – Копирует содержимое рабочей копии в индекс.
 * `git commit` – Копирует содержимое индекса в HEAD.
 
-## Reset is Easier Now
+## Reset теперь проще
 
-Now that we know a few things, some of Git's seemingly-strange commands start to make sense.
-One example is `git reset`, one of the most hated and feared commands in all of Git.
-Reset generally performs three steps:
+Теперь, понимая некоторые вещи, немного странные команды Git'а приобретают смысл.
+Например `git reset`, одна из наиболее ненавистных и страшных команд из всех.
+Перестановка (англ. reset) как правило выполняет три шага:
 
-1. Move HEAD (and the branch it points to) to point to a different commit
-1. Update the index to have the contents from HEAD
-1. Update the work tree to have the contents from the index
+1. Подвинуть HEAD (и ветку на которую он показывает) на другой коммит
+1. Обновить содержимое индекса из HEAD
+1. Обновить содержимое рабочей копии из индекса
 
-And, through some oddly-named command-line options, you can choose where it stops.
+И, с помощью некоторых, странно названных параметров командной строки, вы можете выбрать на каком шаге остановиться.
 
-* `git reset --soft` will stop after step 1.
-  HEAD and the checked-out branch are moved, but that's all.
-* `git reset --mixed` stops after step 2.
-  The work tree isn't touched at all, but HEAD and the index are.
-  This is actually reset's default; the `--mixed` argument is optional.
-* `git reset --hard` performs all three steps.
-  After the first two, the work tree is overwritten with what's in the index.
+* `git reset --soft` остановится на первом шаге.
+  HEAD и текущая ветка подвинется, но на этом всё.
+* `git reset --mixed` остановится на втором шаге.
+  Рабочая копия не будет затронута, но HEAD и индекс изменятся.
+  Это поведение reset'а по умолчанию, параметр `--mixed` опциональный.
+* `git reset --hard` выполняет все шаги.
+  После первых двух рабочая копия переписана тем что в индексе.
 
-If you use reset with a path, Git actually skips the first step, since moving HEAD is a whole-repository operation.
-The other two steps apply, though; `--mixed` will update the index with HEAD's version of the file, and `--hard` also updates the working directory, effectively trashing any modifications you've made to the file since it was checked out.
-
+Если вы используете reset с указанием пути в качестве параметра, Git автоматически пропускает первый шаг, потому что перестановка HEAD — это операция над всем репозиторием.
+Остальные два шага работают так же: с `--mixed` обновляется индекс из HEAD'а, а с `--hard` также обновляется и рабочая копия, эффективно отменяя любые модификации файлов, которые вы сделали после последнего чекаута.
 
 ## The Everyday Pattern
 
