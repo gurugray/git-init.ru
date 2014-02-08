@@ -149,7 +149,7 @@ blockquote {
 }
 
 pre {
-  background: rgba(224, 224, 224, 0.5);
+  background: rgba(98, 218, 75, 0.13);
   padding: 10px 20px 10px 10px;
   margi-left: -10px;
   font-size: 14px;
@@ -157,6 +157,8 @@ pre {
   text-wrap: normal;
   overflow: auto;
   overflow-y: hidden;
+
+  margin: 14px -10px 14px -10px;
 }
 
 table {
