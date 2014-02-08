@@ -211,33 +211,32 @@ branch  →  tag  →  tag_ann_a  →  tag_ann_b  →  blob
 Если вы используете reset с указанием пути в качестве параметра, Git автоматически пропускает первый шаг, потому что перестановка HEAD — это операция над всем репозиторием.
 Остальные два шага работают так же: с `--mixed` обновляется индекс из HEAD'а, а с `--hard` также обновляется и рабочая копия, эффективно отменяя любые модификации файлов, которые вы сделали после последнего чекаута.
 
-## The Everyday Pattern
+## Ежедневное использование
 
-Let's take a look at a really common usage pattern with our new Git X-ray goggles on.
+Давайте теперь посмотрим на часто встречаемые случаи новыми глазами.
 
 ```
 $ git checkout -b bug-2345 master
 ```
 
-Git creates a new branch called `bug-2345`, and points it at the same commit `master` points to. Then it moves HEAD to point to `bug-2345`, and updates the index and work tree to match HEAD.
+Git создаёт новую ветку с именем `bug-2345`, и она указывает на тот же коммит, на который смотрит `master`. После этого двигает HEAD на `bug-2345` и обновляет индекс и рабочую копию в соответствии с HEAD'ом.
 
-You do some work, changing the files in the work tree, and now you're ready to make a commit.
+Вы делаете какую-то работу, меняете файлы в рабчей копии и готовы сделать коммит.
 
 ```
 $ git add foo.txt
 $ git add -p bar.html
 ```
 
-Git updates the index to match the contents of the work tree.
-You can even update it with only *some* of the changes from a file.
+Git обновляет индекс контентом из рабочей копии.
+Вы даже можете обновить его только *некоторыми* изменениями файла.
 
 ```
 $ git commit -m 'Update foo and bar'
 ```
 
-Git converts the index into a series of linked objects in the ODB. Blobs and trees whose contents match are re-used, and the files and directories that changed have new blobs and trees generated for them.
-Git then creates a new commit which points to the new root tree, and (since HEAD points to a branch) `bug-2345` is moved to point to the new commit.
-
+Git преобразует индекс в серию связанных объектов в обектной базе. Blob'ы и деревья, содержимое которых совпадает — повторно используются, а генерируются для файлов и директорий, которые изменились.
+Затем Git создаёт новый коммит, который указывает на новое корневое дерево и (так как HEAD указывает на ветку) `bug-2345` подвигается на этот коммит.
 
 ## Go Forth
 
