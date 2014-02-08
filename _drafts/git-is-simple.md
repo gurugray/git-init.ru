@@ -238,11 +238,11 @@ $ git commit -m 'Update foo and bar'
 Git преобразует индекс в серию связанных объектов в обектной базе. Blob'ы и деревья, содержимое которых совпадает — повторно используются, а генерируются для файлов и директорий, которые изменились.
 Затем Git создаёт новый коммит, который указывает на новое корневое дерево и (так как HEAD указывает на ветку) `bug-2345` подвигается на этот коммит.
 
-## Go Forth
+## Двигаемся дальше
 
-With most version-control systems, you're encouraged to just get to know the UI layer, and the details will be safely abstracted away.
-Git is different; its basic data model is at a high enough level that it's pretty easy to understand, and its UI layer is so thin, that you'll find yourself learning the internals whether you want to or not – you'll need to for everything except the bare minimum of usage.
-I hope this article has convinced you that there isn't really that much to know, and that you earn many new abilities by going through this process.
+В основном системы контроля версий поощряют лишь знания пользовательского интерфейса, а детали тщательно скрываются за абстракциями.
+Git в этом отличается, его базовая модель данных на достаточно близком к пользователю уровне и её легко понять, пользовательский интерфейс настолько тонок, что вы обнаружите себя изучающим внутренности, хотите вы того или нет, эти знания помогут вам во всём, исключая тривиальные случаи.
+Я надеюсь что эта статья убедила вас в том, что тут не так много нужно знать и вы получите больше возможностей пройдя через этот процесс.
 
-Your new understanding has made you powerful.
-Please use your new powers for good.
+Ваши новые знания сделали вас могущественнее.
+Пожалуйста используйте вашу силу во имя добра.
