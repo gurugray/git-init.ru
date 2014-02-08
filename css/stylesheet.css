@@ -335,12 +335,25 @@ ol, ul
 
 .note
 {
+  font-size: 15px;
+
   position: absolute;
   bottom: 1em;
-  margin-left: 1em;
+  right: 0;
 
-  font: 11px/1 serif;
+  margin-right: 1em;
 }
+
+.rebasing-title
+{
+  margin-left: -2em;
+}
+
+.rebasing-title::after
+{
+  content: ' :'
+}
+
 
 .bage::before
 {
