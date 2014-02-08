@@ -15,11 +15,7 @@ permalink: /import/git-is-simple.html
 
 layout: translate
 ---
-> Git Internals for the Rest of Us
-
-> # Git is Simple
-
-> Sometimes you actually do need to know how it works.
+> Иногда нам действительно нужно знать как это работает.
 
 The way we use most computer systems is through a metaphor.
 
