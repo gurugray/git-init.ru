@@ -1,5 +1,5 @@
 ---
-title: "Git это просто"
+title: "Git — это просто"
 
 author: Ben Straub
 authorLink: https://github.com/ben
