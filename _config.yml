@@ -11,3 +11,4 @@ permalink: /:year/:categories/:title.html
 url: "http://git-init.ru"
 author: "Сергей Сергеев"
 
+production: true
