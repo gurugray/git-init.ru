@@ -4,9 +4,11 @@ title: "Рецепты и полезные советы по использов�
 ---
 
 <div class="bage">git init .</div>
+
 <div class="note">
-<div class="rebasing-title">git rebase origin/year2014</div>
-{% for post in site.posts %}
-<a href="{{site.url}}{{ post.url }}">{{ post.title }}</a><br>
-{% endfor %}
+	<div class="rebasing-title">git rebase origin/year2014</div>
+
+	{% for post in site.posts %}
+		<a href="{{site.url}}{{ post.url }}">{{ post.title }}</a><br>
+	{% endfor %}
  </div>

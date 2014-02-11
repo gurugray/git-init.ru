@@ -11,8 +11,7 @@
         <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="http://feeds.feedburner.com/GitTips" />
     </head>
     <body>
-    {{ content }}
-    </div>
-    {% if site.production %}{% include metrika.md %}{% endif %}
+        {{ content }}
+        {% if site.production %}{% include metrika.md %}{% endif %}
     </body>
 </html>

@@ -4,25 +4,25 @@ layout: default
 <h2 class="post-title translate">{{ page.title }}</h2>
 
 <div class="post">
-{{ content }}
+	{{ content }}
 
-<h3 class="origin">Оригинальная статья: <a href="{{page.origin}}">{{page.originTitle}}</a></h3>
+	<h3 class="origin">Оригинальная статья: <a href="{{page.origin}}">{{page.originTitle}}</a></h3>
 
-<p class="contribute">Если вы заметили ошибку, вы всегда можете отредактировать <a href="https://github.com/gurugray/git-init.ru/edit/gh-pages/{{page.path}}">статью</a> и прислать pull-request. Или просто написать переводчику.</p>
+	<p class="contribute">Если вы заметили ошибку, вы всегда можете отредактировать <a href="https://github.com/gurugray/git-init.ru/edit/gh-pages/{{page.path}}">статью</a> и прислать pull-request. Или просто написать переводчику.</p>
 
-<div class="users">
-	<div class="user author">
-		<img class="userpic" src="{{page.authorAvatar}}">
-		Автор: <a href="{{page.authorLink}}">{{page.author}}</a><br>
-		GitHub: <a href="https://github.com/{{page.authorGithub}}">{{page.authorGithub}}</a><br>
-		Twitter: <a href="https://twitter.com/{{page.authorTwitter}}">@{{page.authorTwitter}}</a>
-	</div><div class="user author">
-		<img class="userpic" src="https://gravatar.com/avatar/2ffacc76f61622698389096864acf01b?r=x&amp;s=160">
-		Переводчик: <a href="http://git-init.ru">Сергей Сергеев</a><br>
-		GitHub: <a href="https://github.com/gurugray">gurugray</a><br>
-		Twitter: <a href="https://twitter.com/gurugray">@gurugray</a>
+	<div class="users">
+		<div class="user author">
+			<img class="userpic" src="{{page.authorAvatar}}">
+			Автор: <a href="{{page.authorLink}}">{{page.author}}</a><br>
+			GitHub: <a href="https://github.com/{{page.authorGithub}}">{{page.authorGithub}}</a><br>
+			Twitter: <a href="https://twitter.com/{{page.authorTwitter}}">@{{page.authorTwitter}}</a>
+		</div><div class="user author">
+			<img class="userpic" src="https://gravatar.com/avatar/2ffacc76f61622698389096864acf01b?r=x&amp;s=160">
+			Переводчик: <a href="http://git-init.ru">Сергей Сергеев</a><br>
+			GitHub: <a href="https://github.com/gurugray">gurugray</a><br>
+			Twitter: <a href="https://twitter.com/gurugray">@gurugray</a>
+		</div>
+
 	</div>
-
-</div>
 </div>
 {% if site.production %}{% include disqus.md %}{% endif %}
