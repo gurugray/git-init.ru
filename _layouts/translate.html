@@ -11,18 +11,22 @@ layout: default
 	<p class="contribute">Если вы заметили ошибку, вы всегда можете отредактировать <a href="https://github.com/gurugray/git-init.ru/edit/gh-pages/{{page.path}}">статью</a> и прислать pull-request. Или просто написать переводчику.</p>
 
 	<div class="users">
-		<div class="user author">
-			<img class="userpic" src="{{page.authorAvatar}}">
-			Автор: <a href="{{page.authorLink}}">{{page.author}}</a><br>
-			GitHub: <a href="https://github.com/{{page.authorGithub}}">{{page.authorGithub}}</a><br>
-			Twitter: <a href="https://twitter.com/{{page.authorTwitter}}">@{{page.authorTwitter}}</a>
-		</div><div class="user author">
-			<img class="userpic" src="https://gravatar.com/avatar/2ffacc76f61622698389096864acf01b?r=x&amp;s=160">
-			Переводчик: <a href="http://git-init.ru">Сергей Сергеев</a><br>
-			GitHub: <a href="https://github.com/gurugray">gurugray</a><br>
-			Twitter: <a href="https://twitter.com/gurugray">@gurugray</a>
+		<div class="user">
+			<img class="userpic" src="{{page.author-avatar}}">
+			Автор: <a href="{{page.author-site}}">{{page.author-name}}</a><br>
+			GitHub: <a href="https://github.com/{{page.author-github}}">{{page.author-github}}</a><br>
+			Twitter: <a href="https://twitter.com/{{page.author-twitter}}">@{{page.author-twitter}}</a>
 		</div>
-
+		{% if page.translator %}
+		<div class="user">
+			<img class="userpic" src="{{page.translator-avatar}}">
+			Автор: <a href="{{page.translator-site}}">{{page.translator-name}}</a><br>
+			GitHub: <a href="https://github.com/{{page.translator-github}}">{{page.translator-github}}</a><br>
+			Twitter: <a href="https://twitter.com/{{page.translator-twitter}}">@{{page.translator-twitter}}</a>
+		</div>
+		{% else %}
+		{% include default-translator.md %}
+		{% endif %}
 	</div>
 </div>
 {% if site.production %}{% include disqus.md %}{% endif %}

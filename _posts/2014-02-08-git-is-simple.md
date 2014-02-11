@@ -1,11 +1,11 @@
 ---
 title: "Git — это просто"
 
-author: Ben Straub
-authorLink: https://github.com/ben
-authorAvatar: https://gravatar.com/avatar/0d410939c9e80980cf0430772567dfb4?r=x&s=160
-authorGithub: ben
-authorTwitter: benstraub
+author-name: Ben Straub
+author-site: https://github.com/ben
+author-avatar: https://gravatar.com/avatar/0d410939c9e80980cf0430772567dfb4?r=x&s=160
+author-github: ben
+author-twitter: benstraub
 
 origin: http://jaxenter.com/git-is-simple-on-the-inside-49426.html
 originTitle: "Git is simple (on the inside)"
