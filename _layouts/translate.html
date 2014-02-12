@@ -15,7 +15,7 @@ layout: default
 		{% if page.translator %}
 			{% include author.md author=page.translator %}
 		{% else %}
-			{% include default-translator.md %}
+			{% include author.md author=site.data.translator %}
 		{% endif %}
 	</div>
 </div>
