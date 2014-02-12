@@ -302,6 +302,11 @@ ul .index::before
     margin-bottom: 3em;
 }
 
+.post_translate
+{
+    margin-bottom: 1em;
+}
+
 ol, ul
 {
     margin: 14px 0;
@@ -413,6 +418,7 @@ ol, ul
 
   width: 100%;
   padding-top: 10px;
+  margin-bottom: 3em;
 
   border-top: 2px solid #eee;
 }

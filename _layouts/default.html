@@ -12,13 +12,12 @@
         <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="http://feeds.feedburner.com/GitTips" />
     </head>
     <body>
-
-    <div class="container">
-      <section id="main_content">
-        {{ content }}
-      </section>
-    </div>
-    {% if site.production %}{% include metrika.md %}{% endif %}
-
+        <div class="container">
+            <section id="main_content">
+                {{ content }}
+                {% if site.production %}{% include disqus.md %}{% endif %}
+            </section>
+        </div>
+        {% if site.production %}{% include metrika.md %}{% endif %}
     </body>
 </html>
