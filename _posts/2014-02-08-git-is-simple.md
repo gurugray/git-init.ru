@@ -8,6 +8,13 @@ author:
     github: ben
     twitter: benstraub
 
+translator:
+    name: Сергей Сергеев
+    site: http://git-init.ru
+    avatar: https://gravatar.com/avatar/2ffacc76f61622698389096864acf01b?r=x&amp;s=160
+    github: gurugray
+    twitter: gruugray
+
 origin:
     link: http://jaxenter.com/git-is-simple-on-the-inside-49426.html
     title: "Git is simple (on the inside)"
