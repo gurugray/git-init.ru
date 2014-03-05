@@ -10,12 +10,12 @@ layout: default
 <p class="contribute">Если вы заметили ошибку, вы всегда можете отредактировать <a href="https://github.com/gurugray/git-init.ru/edit/gh-pages/{{page.path}}">статью</a> и прислать pull-request. Или просто написать переводчику.</p>
 
 <div class="users">
-	{% include author.md author=page.author %}
+	{% include author.md author=page.author title='Автор' %}
 	{% assign translator = site.data.translator %}
 
 	{% if page.translator %}
 		{% assign translator = page.translator %}
 	{% endif %}
 
-	{% include author.md author=translator %}
+	{% include author.md author=translator title='Переводчик' %}
 </div>
