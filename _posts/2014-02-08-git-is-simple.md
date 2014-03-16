@@ -11,7 +11,7 @@ author:
 translator:
     name: Сергей Сергеев
     site: http://git-init.ru
-    avatar: https://gravatar.com/avatar/2ffacc76f61622698389096864acf01b?r=x&amp;s=160
+    avatar: https://gravatar.com/avatar/2ffacc76f61622698389096864acf01b?r=x&s=160
     github: gurugray
     twitter: gruugray
 
