@@ -71,3 +71,6 @@ Workflow позволяет ответить на них заранее.
 Ну, а для полноценного «ведения» своего репозитория нужно понимать возможности системы контроля версий, в частности, различия таких команд как `git rebase` и `git merge`, когда и как они применяются.
 
 В интернете есть много статей по поводу ведения проектов в git и использования `git rebase`, `git merge`, ну и `git cherry-pick`. Например, статья «[Changing history, or How to Git pretty](http://justinhileman.info/article/changing-history/)» наглядно показывает, что стоит делать со своей историей, а чего делать не стоит.
+
+### Дополнительные ссылки
+- [GitLab Flow](http://docs.gitlab.com/ee/workflow/gitlab_flow.html)
