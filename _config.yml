@@ -8,7 +8,7 @@ include: ['_pages']
 relative_permalinks: false
 permalink: /:year/:categories/:title.html
 
-url: "http://git-init.ru"
+url: "https://git-init.ru"
 author: "Сергей Сергеев"
 
 production: true
