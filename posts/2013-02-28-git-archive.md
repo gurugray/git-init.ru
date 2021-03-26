@@ -1,10 +1,10 @@
 ---
 title: "git archive"
 date: 2013-02-28
-tags: tips, github, instaweb
-category: post
+tags: post
+permalink: "2013/post/git-archive.html"
 
-layout: post
+layout: layouts/post.njk
 ---
 
 В git есть такая удобная штука, как [git-archive](http://git-scm.com/docs/git-archive).
@@ -14,6 +14,7 @@ layout: post
 Но не на всех серверах возможно выполнения такой процедуры — это выполнение отдельной команды на сервере, а значит чревато проблемами и она _(команда)_ отключена по умолчанию в конфигурации в простом [git daemon](http://git-scm.com/docs/git-daemon)
 
 А GitHub ругается примерно так:
+
 <pre>fatal: remote error:
   Your Git client has made an invalid request:
   003agit-upload-archive /gurugray/xxxxx.git</pre>

@@ -1,0 +1,7 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+<h2 class="post-title">{{ title }}</h2>
+<div class="post">{{ content | safe }}</div>
+{% include "disqus.md" %}

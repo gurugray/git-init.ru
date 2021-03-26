@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+
+<h2 class="post-title translate">{{ title }}</h2>
+<div class="post post_translate">{{ content | safe }}</div>
+
+<h3 class="origin">Оригинальная статья: <a href="{{origin.link}}">{{origin.title}}</a></h3>
+
+<p class="contribute">Если вы заметили ошибку, вы всегда можете отредактировать <a href="https://github.com/gurugray/git-init.ru/edit/gh-pages/{{page.path}}">статью</a> и прислать pull-request. Или просто написать переводчику.</p>
+
+<div class="users">
+	{% include "author.md" %}
+  {% set author = translator %}
+	{% include "author.md" %}
+</div>
+{% include "disqus.md" %}
