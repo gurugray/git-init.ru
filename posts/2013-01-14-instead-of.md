@@ -2,7 +2,7 @@
 title: "Config «insteadOf»"
 date: 2013-01-14
 tags: post
-permalink: "2013/post/instead-of.html"
+permalink: "__/instead-of.html"
 
 layout: layouts/post.njk
 ---

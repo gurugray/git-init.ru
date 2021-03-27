@@ -1,0 +1,55 @@
+main {
+  max-width: 55rem;
+
+  padding-bottom: 5rem;
+}
+
+blockquote,
+pre {
+  margin: 1rem 0;
+  padding: 0.5rem 2rem;
+  background-color: #eee;
+  border-radius: 3px;
+  color: #666;
+}
+
+pre code {
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+}
+
+p code {
+  background-color: #eee;
+  padding: 0.1em 0.3em;
+  margin: 0 0.2em;
+  border-radius: 4px;
+
+  white-space: nowrap;
+}
+
+blockquote {
+  border-left: 2px solid;
+}
+
+a {
+  color: #21a5a5;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+}
+
+.user img {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+}
+
+.contribute {
+  color: #999;
+}

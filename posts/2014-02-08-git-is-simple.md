@@ -1,5 +1,5 @@
 ---
-title: "Git — это просто"
+title: 'Git — это просто'
 
 author:
   name: Ben Straub
@@ -17,9 +17,9 @@ translator:
 
 origin:
   link: http://jaxenter.com/git-is-simple-on-the-inside-49426.html
-  title: "Git is simple (on the inside)"
+  title: 'Git is simple (on the inside)'
 
-permalink: /import/git-is-simple.html
+permalink: '__/git-is-simple.html'
 
 layout: layouts/translate.njk
 ---
@@ -68,8 +68,8 @@ $ git cat-file -p d7abd6 | head -n 5
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
+  <body>
 ```
 
 Обратите внимание, что тут нет имени файла.

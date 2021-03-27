@@ -1,0 +1,18 @@
+{
+  "redirects": [
+    {
+      "source": "/2013/post/:match*.html",
+      "destination": "/__/:match*"
+    },
+    {
+      "source": "/import/:match*.html",
+      "destination": "/__/:match*"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/__/:match*",
+      "destination": "/__/:match*.html"
+    }
+  ]
+}

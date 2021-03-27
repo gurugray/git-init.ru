@@ -2,7 +2,7 @@
 date: 2013-02-07
 title: "Зачем нам workflow для работы с git?"
 tags: post
-permalink: "2013/post/why-git-flow.html"
+permalink: "__/why-git-flow.html"
 
 layout: layouts/post.njk
 ---

@@ -1,8 +1,8 @@
 ---
-title: "git archive"
+title: 'git archive'
 date: 2013-02-28
 tags: post
-permalink: "2013/post/git-archive.html"
+permalink: '__/git-archive.html'
 
 layout: layouts/post.njk
 ---
@@ -23,10 +23,8 @@ layout: layouts/post.njk
 
 Но нам иногда нужна подобная функциональность, что бы вытягивать в проект состояние мелких проектов по заданному состоянию.
 
-В GitHub есть есть подобное через http интерфейс:
-`https://github.yandex./$Repo/archive/$ref.zip _($Repo — путь к репозиторию, $Ref — имя ветки или тэга)_`, но указать конкретные папки и файлы уже нельзя — их прийдётся отфильтровывать уже локально.
+В GitHub есть есть подобное через http интерфейс: `https://github.yandex/$Repo/archive/$ref.zip` _($Repo — путь к репозиторию, $Ref — имя ветки или тэга)_, но указать конкретные папки и файлы уже нельзя — их прийдётся отфильтровывать уже локально.
 
-Если же у вас запущен [git instaweb](http://git-scm.com/docs/git-instaweb), то это можно сделать так:
-`https://localhost/$Repo?a=snapshot;h=%Ref;sf=tgz _($Repo — путь к репозиторию, $Ref — имя ветки, тэга, или хэш коммита)_` но файлы тоже нельзя выбирать, к сожалению.
+Если же у вас запущен [git instaweb](http://git-scm.com/docs/git-instaweb), то это можно сделать так: `https://localhost/$Repo?a=snapshot;h=%Ref;sf=tgz` _($Repo — путь к репозиторию, $Ref — имя ветки, тэга, или хэш коммита)_ но файлы тоже нельзя выбирать, к сожалению.
 
 Ну а «закрашенную» функциональность вытягивания архива по хэшу коммита я постараюсь исправить в самом git ;).

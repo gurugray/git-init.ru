@@ -2,7 +2,7 @@
 title: "sparse checkout"
 date: 2013-01-08
 tags: post
-permalink: "2013/post/sparse-checkout.html"
+permalink: "__/sparse-checkout.html"
 
 layout: layouts/post.njk
 ---
