@@ -1,5 +1,4 @@
 body {
-  margin: 1rem 5rem 1rem 10rem;
   padding: 0;
   background: #fff;
   color: #333;
@@ -9,6 +8,12 @@ body {
   font-size: 17px;
 }
 
+@media (min-width: 1000px) {
+  main {
+    margin: 1rem 5rem 1rem 10rem;
+  }
+}
+
 .bage {
   font-family: monospace;
 
@@ -16,7 +21,7 @@ body {
   top: 50%;
   left: 50%;
 
-  width: 21em;
+  width: 16rem;
   transform: translateX(-50%) translateY(-50%);
 }
 

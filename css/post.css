@@ -1,13 +1,53 @@
-main {
-  max-width: 55rem;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
+@media (min-width: 800px) {
+  main {
+    max-width: 55rem;
+    padding-bottom: 5rem;
+  }
+
+  blockquote,
+  pre {
+    margin: 1rem 0;
+    padding: 0.5rem 2rem;
+  }
+
+  p code {
+    white-space: nowrap;
+  }
+}
+
+main {
   padding-bottom: 5rem;
+}
+
+@media (max-width: 800px) {
+  blockquote,
+  pre {
+    margin: 0;
+    padding: 0.5rem 2rem;
+  }
+  main {
+    padding: 0 0.5rem 2rem;
+  }
+
+  pre {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  p code {
+    white-space: normal;
+    word-break: break-all;
+  }
 }
 
 blockquote,
 pre {
-  margin: 1rem 0;
-  padding: 0.5rem 2rem;
   background-color: #eee;
   border-radius: 3px;
   color: #666;
@@ -23,8 +63,6 @@ p code {
   padding: 0.1em 0.3em;
   margin: 0 0.2em;
   border-radius: 4px;
-
-  white-space: nowrap;
 }
 
 blockquote {
