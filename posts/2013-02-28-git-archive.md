@@ -1,7 +1,6 @@
 ---
 title: 'git archive'
 date: 2013-02-28
-tags: post
 permalink: '__/git-archive.html'
 
 layout: layouts/post.njk

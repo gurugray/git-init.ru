@@ -1,7 +1,8 @@
 ---
 date: 2012-12-10
-title: "Зачем ещё один сайт про Git?"
-permalink: "__/why-git-init.html"
+title: 'Зачем ещё один сайт про Git?'
+changeFreq: never
+permalink: '__/why-git-init.html'
 
 layout: layouts/post.njk
 ---

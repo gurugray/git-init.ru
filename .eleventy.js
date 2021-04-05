@@ -43,6 +43,8 @@ module.exports = function (eleventyConfig) {
     return new CleanCSS({}).minify(code).styles
   })
 
+  eleventyConfig.addFilter('cleanUrl', (value) => value.replace(/\.html$/, ''))
+
   // Create an array of all tags
   eleventyConfig.addCollection('tagList', function (collection) {
     let tagSet = new Set()
@@ -53,10 +55,9 @@ module.exports = function (eleventyConfig) {
     return [...tagSet]
   })
 
-  // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy('img')
-  eleventyConfig.addPassthroughCopy('css')
+  // Copy the files and folders to the output
   eleventyConfig.addPassthroughCopy('favicon.ico')
+  eleventyConfig.addPassthroughCopy('robots.txt')
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({

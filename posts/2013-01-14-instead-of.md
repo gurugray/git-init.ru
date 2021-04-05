@@ -1,8 +1,7 @@
 ---
-title: "Config «insteadOf»"
+title: 'Config «insteadOf»'
 date: 2013-01-14
-tags: post
-permalink: "__/instead-of.html"
+permalink: '__/instead-of.html'
 
 layout: layouts/post.njk
 ---
