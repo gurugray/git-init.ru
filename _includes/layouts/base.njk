@@ -6,8 +6,13 @@
     <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    {% if stylesheet %}<link rel="stylesheet" href="{{ stylesheet | url }}">{% endif %}
+    {% set css %}
+      {% include "css/index.css" %}
+      {% if stylesheet %}{% include stylesheet %}{% endif %}
+    {% endset %}
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
   </head>
   <body>
     <main>
