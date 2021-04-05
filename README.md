@@ -1,1 +1,1 @@
-## Исходный код сайта http://git-init.ru
+## Исходный код сайта https://git-init.ru
