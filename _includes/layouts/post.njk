@@ -5,3 +5,4 @@ stylesheet: 'css/post.css'
 <h1>{{ title }}</h1>
 {{ content | safe }}
 {% if isTranslate %}{% include "translate.md" %}{% endif %}
+<div class="post-date">{{ date | readableDate }}</div>

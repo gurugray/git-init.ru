@@ -80,6 +80,8 @@ a:hover {
 .user {
   display: flex;
   flex-direction: row;
+
+  margin-bottom: 1rem;
 }
 
 .user img {
@@ -90,4 +92,9 @@ a:hover {
 
 .contribute {
   color: #999;
+}
+
+.post-date {
+  font-size: 10px;
+  color: #666;
 }

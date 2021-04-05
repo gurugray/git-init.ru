@@ -11,13 +11,9 @@ module.exports = function (eleventyConfig) {
   // Alias `layout: post` to `layout: layouts/post.njk`
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
 
-  eleventyConfig.addFilter('readableDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('dd LLL yyyy')
-  })
-
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd')
+  eleventyConfig.addFilter('readableDate', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: 'utc+3' }).setLocale('ru').toFormat('dd LLLL yyyy')
   })
 
   // Get the first `n` elements of a collection.

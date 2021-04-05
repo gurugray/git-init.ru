@@ -1,5 +1,6 @@
 ---
 title: 'Git — это просто'
+date: 2014-02-08
 isTranslate: true
 
 author:
