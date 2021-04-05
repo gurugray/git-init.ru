@@ -15,7 +15,7 @@ body {
 }
 
 .bage {
-  font-family: monospace;
+  font-family: 'Fira Code', Menlo, monospace;
 
   position: absolute;
   top: 50%;

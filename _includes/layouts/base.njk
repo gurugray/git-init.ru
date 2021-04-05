@@ -7,13 +7,12 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    {% if stylesheet %}<link rel="stylesheet" href="{{ stylesheet | url }}">{% endif %}
   </head>
   <body>
-    <main id="main_content" {% if templateClass %} class="container {{ templateClass }}"{% endif %}>
+    <main>
       {{ content | safe }}
     </main>
-    <footer></footer>
-    <!-- Current page: {{ page.url | url }} -->
     {% include "metrika.md" %}
   </body>
 </html>

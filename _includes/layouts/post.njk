@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-templateClass: tmpl-post
+stylesheet: '/css/post.css'
 ---
-<link rel="stylesheet" href="{{ '/css/post.css' | url }}">
-<h1 class="post-title">{{ title }}</h1>
-<div class="post">{{ content | safe }}</div>
+<h1>{{ title }}</h1>
+{{ content | safe }}
+{% if isTranslate %}{% include "translate.md" %}{% endif %}
