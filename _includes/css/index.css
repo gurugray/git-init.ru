@@ -8,12 +8,6 @@ body {
   font-size: 17px;
 }
 
-@media (min-width: 1000px) {
-  main {
-    margin: 1rem 5rem 1rem 10rem;
-  }
-}
-
 .bage {
   font-family: 'Fira Code', Menlo, monospace;
 

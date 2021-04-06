@@ -4,7 +4,13 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
+  main {
+    margin: 1rem 5rem 1rem 10rem;
+  }
+}
+
+@media (min-width: 1000px) {
   main {
     max-width: 55rem;
     padding-bottom: 5rem;
@@ -25,7 +31,7 @@ main {
   padding-bottom: 5rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   blockquote,
   pre {
     margin: 0;
@@ -37,7 +43,7 @@ main {
 
   pre {
     width: 100%;
-    overflow: scroll;
+    overflow: auto;
   }
 
   p code {
