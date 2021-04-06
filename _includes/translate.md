@@ -1,6 +1,6 @@
 <h3 class="origin">Оригинальная статья: <a href="{{origin.link}}">{{origin.title}}</a></h3>
 <div class="user">
-  <img class="userpic" src="{{author.avatar | url }}">
+  <img alt="author userpic" class="userpic" src="{{author.avatar | url }}">
   <div class="meta">
   <a href="{{author.site | url}}">{{author.name}}</a><br>
   GitHub: <a href="https://github.com/{{author.github | url}}">{{author.github}}</a><br>
