@@ -20,6 +20,9 @@
   pre {
     margin: 1rem 0;
     padding: 0.5rem 2rem;
+
+    width: 100%;
+    overflow: auto;
   }
 
   p code {
@@ -29,6 +32,13 @@
 
 main {
   padding-bottom: 5rem;
+}
+
+img {
+  margin: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }
 
 @media (max-width: 1000px) {

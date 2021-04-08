@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{metadata.author.name}}, {{metadata.author.email}}">
+    {% if origin.link %}<meta name="original-source" content="{{ origin.link }}">{% endif %}
     <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
@@ -10,14 +12,10 @@
       {% include "css/index.css" %}
       {% if stylesheet %}{% include stylesheet %}{% endif %}
     {% endset %}
-    <style>
-      {{ css | cssmin | safe }}
-    </style>
+    <style>{{ css | cssmin | safe }}</style>
   </head>
   <body>
-    <main>
-      {{ content | safe }}
-    </main>
+    <main>{{ content | safe }}</main>
     {% include "metrika.md" %}
   </body>
 </html>
