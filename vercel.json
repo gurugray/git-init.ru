@@ -5,6 +5,10 @@
       "destination": "/__/:match*"
     },
     {
+      "source": "/post/why-git-flow",
+      "destination": "/__/why-git-flow"
+    },
+    {
       "source": "/import/:match*.html",
       "destination": "/__/:match*"
     }
